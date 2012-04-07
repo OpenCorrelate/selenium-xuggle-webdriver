@@ -1,0 +1,14 @@
+# Eclipse
+.project
+.classpath
+.settings/*
+
+# Maven
+target/*
+
+# Ignore logs
+*.log
+**/*.log
+
+# General
+*~
