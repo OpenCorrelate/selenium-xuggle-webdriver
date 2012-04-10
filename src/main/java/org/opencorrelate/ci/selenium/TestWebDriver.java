@@ -21,13 +21,17 @@ import com.google.common.base.Predicate;
  * @author Presley H. Cannady, Jr. <revprez@opencorrelate.org>
  *
  */
-public abstract class TestWebDriver implements WebDriver {
+public abstract class TestWebDriver implements ITestWebDriver {
 
 	
 	private WebDriver driver;
 	
-	public TestWebDriver(WebDriver driver) {
+	public void setDelegateDriver(WebDriver driver) {
 		this.driver = driver;
+	}
+	
+	public TestWebDriver(WebDriver driver) {
+		setDelegateDriver(driver);
 	}
 	
 	public void get(String url) {
