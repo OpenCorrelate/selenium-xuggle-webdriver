@@ -116,7 +116,7 @@ public abstract class TestWebDriver implements WebDriver {
 	 */
 	public boolean isTextPresent(String text) {
 		try {
-			driver.findElement(By.xpath(String.format("//body[contains(text(),'%s)']")));
+			driver.findElement(By.xpath(String.format("//body[contains(text(),'%s)']",text)));
 			return true;
 		} catch (NoSuchElementException e){
 			return false;
